@@ -172,6 +172,7 @@ class Install extends Migration
         $newSettings['defaultText'] = $oldSettings['defaultText'] ?? '';
         $newSettings['allowTarget'] = $oldSettings['allowTarget'] ?? 0;
         $newSettings['allowCustomText'] = $oldSettings['allowCustomText'] ?? 0;
+        $newSettings['allowEmptyText'] = $oldSettings['allowEmptyText'] ?? 0;
 
         if($oldSettings['types'] ?? false)
         {

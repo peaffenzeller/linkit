@@ -194,7 +194,7 @@ abstract class Link extends SavableComponent implements LinkInterface
 
     public function getText(): string
     {
-        if($this->fieldSettings['allowCustomText'] && $this->customText != '')
+        if($this->fieldSettings['allowCustomText'] && ($this->fieldSettings['allowEmptyText'] || $this->customText != ''))
         {
             return $this->customText;
         }
@@ -246,7 +246,7 @@ abstract class Link extends SavableComponent implements LinkInterface
 
     protected function getCustomOrDefaultText()
     {
-        if($this->fieldSettings['allowCustomText'] && $this->customText != '')
+        if($this->fieldSettings['allowCustomText'] && ($this->fieldSettings['allowEmptyText'] || $this->customText != ''))
         {
             return $this->customText;
         }

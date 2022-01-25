@@ -81,6 +81,12 @@
 	}) }}
 
 	{{ forms.checkboxField({
+		label: "Allow empty link text"|t('linkit'),
+		name: 'allowEmptyText',
+		checked: field.allowEmptyText
+	}) }}
+
+	{{ forms.checkboxField({
 		label: "Show option to open link in new window"|t('linkit'),
 		name: 'allowTarget',
 		checked: field.allowTarget
